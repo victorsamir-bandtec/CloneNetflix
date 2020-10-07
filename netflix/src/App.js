@@ -1,22 +1,9 @@
-import React, { useEffect } from 'react';
-import tmdb from './tmdb';
+import React from 'react';
+import Home from './pages/home/index'
 
-function App() {
+import './normalize.css'
+import './global.css'
 
-  useEffect(() => {
-
-    const loadAll = async () => {
-      const list = await tmdb.getHomeList();
-      console.log(list);
-    }
-
-    loadAll();
-
-  }, []);
-
-  return (
-    <h1>samir</h1>
-  );
-}
+const App = () => <Home />;
 
 export default App;

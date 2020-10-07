@@ -32,37 +32,34 @@ export default {
       {
         genero: 'ação',
         titulo: 'Ação',
-        itens: await pegandoDados(`/discover/movie?with_generes=28&language=pt-BR&api_key=${apiKey}`)
+        itens: await pegandoDados(`/discover/movie?with_genres=28&language=pt-BR&api_key=${apiKey}`)
       },
 
       {
         genero: 'terror',
         titulo: 'Terror',
-        itens: await pegandoDados(`/discover/movie?with_generes=27&language=pt-BR&api_key=${apiKey}`)
+        itens: await pegandoDados(`/discover/movie?with_genres=27&language=pt-BR&api_key=${apiKey}`)
       },
 
       {
         genero: 'comedia',
         titulo: 'Comedia',
-        itens: await pegandoDados(`/discover/movie?with_generes=35&language=pt-BR&api_key=${apiKey}`)
+        itens: await pegandoDados(`/discover/movie?with_genres=35&language=pt-BR&api_key=${apiKey}`)
       },
 
       {
         genero: 'drama',
         titulo: 'Drama',
-        itens: await pegandoDados(`/discover/movie?with_generes=18&language=pt-BR&api_key=${apiKey}`)
+        itens: await pegandoDados(`/discover/movie?with_genres=18&language=pt-BR&api_key=${apiKey}`)
       },
 
       {
         genero: 'Ficção',
         titulo: 'Ficção Cientifica',
-        itens: await pegandoDados(`/discover/movie?with_generes=878&language=pt-BR&api_key=${apiKey}`)
+        itens: await pegandoDados(`/discover/movie?with_genres=878&language=pt-BR&api_key=${apiKey}`)
       }
 
     ];
   }
-
-
-
 
 }

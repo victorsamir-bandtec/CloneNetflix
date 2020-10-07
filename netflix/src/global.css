@@ -1,0 +1,21 @@
+* {
+  margin : 0;
+  padding: 0;
+  outline: 0;
+
+  box-sizing: border-box;
+  cursor    : default;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font                  : 400 16px 'Roboto Slab', serif;
+  text-rendering        : optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  color     : white;
+  background: rgb(3, 3, 3);
+}
