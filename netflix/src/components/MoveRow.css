@@ -5,7 +5,10 @@
 }
 
 .container h2 {
-  margin-left: 40px;
+  margin-left  : 40px;
+  margin-bottom: 5px;
+
+  font-size  : 2rem;
   font-weight: 500;
 }
 
@@ -13,11 +16,12 @@
 
 .movies {
   overflow-x  : hidden;
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
 .list {
-  width: 500vw;
+  width : 500vw;
+  height: 280px;
 }
 
 
@@ -26,19 +30,52 @@
 
 .content-movies {
   display: inline-block;
-  width  : 180px;
+  width  : 185px;
 }
 
 .content-movies img {
   width        : 100%;
-  border-radius: 3px;
+  border-radius: 2px;
   cursor       : pointer;
 
   transform : scale(0.85);
-  transition: 200ms all ease-in-out;
+  transition: 200ms ease-in;
 }
 
 
-.content-movies img:hover {
+
+/*----------  Capa dos filmes  ----------*/
+
+.img-movies {
+  height: 0;
+}
+
+.img-movies .play {
+  position: relative;
+  bottom  : 200px;
+  left    : 30px;
+
+  width: 130px;
+
+  visibility: hidden;
+  opacity   : 0;
+
+  transition: 300ms ease-in-out;
+}
+
+.img-movies:hover .capa {
   transform: scale(1);
+}
+
+.img-movies:hover .play {
+  visibility: visible;
+  opacity   : 1;
+}
+
+
+
+/*----------  Sinopse  ----------*/
+
+.sinopse {
+  display: none;
 }
