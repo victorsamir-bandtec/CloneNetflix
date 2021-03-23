@@ -1,18 +1,16 @@
 import React from 'react';
 import './MoveRow.css';
 
-const MoveRow = ({ titulo, itens, le }) => {
+const MoveRow = ({ titulo, itens }) => {
+
   return (
-    <div className="container">
+    <div className="container-moveRow">
 
       <h2>{titulo}</h2>
 
       <div className="movies">
 
         <div className="list">
-
-
-
 
           {
             itens.results.length > 0 && itens.results.map((item, key) => (
@@ -21,13 +19,9 @@ const MoveRow = ({ titulo, itens, le }) => {
 
                 <div className="img-movies">
 
-                  <img className='capa' src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} />
+                  <img className='capa' src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.titulo} />
 
-                  <img className='play' src="https://icon-library.com/images/play-icon-png-transparent/play-icon-png-transparent-4.jpg" />
-
-                  <div className="sinopse">
-                    <p>{item.overview}</p>
-                  </div>
+                  <img className='play' src="https://icon-library.com/images/play-icon-png-transparent/play-icon-png-transparent-4.jpg" alt='icon' />
 
                 </div>
 
@@ -35,9 +29,7 @@ const MoveRow = ({ titulo, itens, le }) => {
             ))
           }
 
-
         </div>
-
       </div>
 
     </div>

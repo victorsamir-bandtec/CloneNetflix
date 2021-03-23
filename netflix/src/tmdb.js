@@ -17,7 +17,7 @@ export default {
     return [
 
       {
-        genero: 'originais',
+        genero: 'netflix',
         titulo: 'Originais da Netflix',
         itens: await pegandoDados(
           `/discover/tv?with_network-213&language=pt-BR&api_key=${apiKey}`)
@@ -30,7 +30,7 @@ export default {
       },
 
       {
-        genero: 'ação',
+        genero: 'acao',
         titulo: 'Ação',
         itens: await pegandoDados(`/discover/movie?with_genres=28&language=pt-BR&api_key=${apiKey}`)
       },
@@ -54,12 +54,34 @@ export default {
       },
 
       {
-        genero: 'Ficção',
+        genero: 'ficcao',
         titulo: 'Ficção Cientifica',
         itens: await pegandoDados(`/discover/movie?with_genres=878&language=pt-BR&api_key=${apiKey}`)
       }
 
     ];
+  },
+
+  getMovieInfo: async (movieId, type) => {
+
+    let info = {};
+
+    if (movieId) {
+      switch (type) {
+        case 'movie':
+          info = await pegandoDados(`/movie/${movieId}?language=pt-BR&api_key=${apiKey}`)
+          break;
+
+        case 'tv':
+          info = await pegandoDados(`/tv/${movieId}?language=pt-BR&api_key=${apiKey}`)
+          break;
+
+        default:
+      }
+    }
+
+    return info;
   }
+
 
 }

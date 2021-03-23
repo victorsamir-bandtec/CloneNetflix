@@ -1,10 +1,10 @@
 /*----------  Geral container  ----------*/
 
-.container {
+.container-moveRow {
   margin-bottom: 30px;
 }
 
-.container h2 {
+.container-moveRow h2 {
   margin-left  : 40px;
   margin-bottom: 5px;
 
@@ -39,9 +39,8 @@
   cursor       : pointer;
 
   transform : scale(0.85);
-  transition: 200ms ease-in;
+  transition: 200ms ease;
 }
-
 
 
 /*----------  Capa dos filmes  ----------*/
@@ -60,7 +59,7 @@
   visibility: hidden;
   opacity   : 0;
 
-  transition: 300ms ease-in-out;
+  transition: 200ms ease;
 }
 
 .img-movies:hover .capa {
@@ -71,7 +70,6 @@
   visibility: visible;
   opacity   : 1;
 }
-
 
 
 /*----------  Sinopse  ----------*/

@@ -1,3 +1,11 @@
+:root {
+  --color-primary: #141414;
+
+
+
+}
+
+
 * {
   margin : 0;
   padding: 0;
@@ -12,10 +20,10 @@ html {
 }
 
 body {
-  font                  : 400 16px 'Roboto Slab', serif;
+  font                  : 400 16px 'Roboto', serif;
   text-rendering        : optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 
   color     : white;
-  background: rgb(12, 12, 12);
+  background: var(--color-primary);
 }
